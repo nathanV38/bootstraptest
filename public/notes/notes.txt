@@ -18,7 +18,7 @@ rapport mission
 CR entretien:
 -preparation
 -pertincence
--axes amélioration
+-axes amï¿½lioration
 
 https://owa.nexeo.fr/owa/
 
@@ -49,12 +49,12 @@ rails appli sans test:
 rails new sample_app -T
 -------------------------------------------------------------------------------
 edit_post_path et new_post_path est un helper de Rails dans le cadre du routing RESTful
-nb: html échappé par défault
+nb: html ï¿½chappï¿½ par dï¿½fault
 
 <%= render 'form' %> 
 partial
 
-Le bloc form_for est utilisé pour créer un formulaire HTML
+Le bloc form_for est utilisï¿½ pour crï¿½er un formulaire HTML
 
 http://coffeescript.org
 
@@ -78,19 +78,19 @@ rails generate model:
 pas de controller -> rails generate controller CreditCard open debit credit close
 (ou rails generate controller 'admin/credit_card' suspend late_fee
 cf: http://guides.rubyonrails.org/command_line.html
-crée controller, view, helpers et tests et assets relatifs)
-pas la ressource mentionnée ds le routes.rb
+crï¿½e controller, view, helpers et tests et assets relatifs)
+pas la ressource mentionnï¿½e ds le routes.rb
 pas la view
 pas assets (javascrpt, stylesheet)
 pas le helper
 
-En mettant bien le nom de la table de référence (en minuscule et au singulier) suivit de _id on indique 
-à Rails que c'est une clé étrangère qui correspond à l'identifiant de l'objet Writer. 
+En mettant bien le nom de la table de rï¿½fï¿½rence (en minuscule et au singulier) suivit de _id on indique 
+ï¿½ Rails que c'est une clï¿½ ï¿½trangï¿½re qui correspond ï¿½ l'identifiant de l'objet Writer. 
 
 http://ontherailsagain.com/articles/les-associations-one-to-many
 -------------------------------------------------------------------------------
 rails:
-ajout colonne à table users (colonne encrypted_password):
+ajout colonne ï¿½ table users (colonne encrypted_password):
 $ rails generate migration add_password_to_users encrypted_password:string
 
 -------------------------------------------------------------------------------
@@ -107,19 +107,19 @@ to get rid of changes on working directory (not already commited)
 mysql test repo:
 https://github.com/nathanV38/testmysql.git
 
-git checkout -b modify-readme (crée branche et switch dessus)
-git branch (le switch a bien été fait)
+git checkout -b modify-readme (crï¿½e branche et switch dessus)
+git branch (le switch a bien ï¿½tï¿½ fait)
 
 git commit -a -m "Amelioration du fichier README" 
-(-a permet d'intégrer au commit les modifs de fichier, qui vont au dela des simples ajout/suprression)
+(-a permet d'intï¿½grer au commit les modifs de fichier, qui vont au dela des simples ajout/suprression)
 
 git checkout master
 git merge modigy-readme (rassemble le branche m-r et ses modifs sur le master)
 
-effacement branche résiduelle:
+effacement branche rï¿½siduelle:
 git branch -d modify-readme
 
-git push (une fois depot github associé à origin, plus besoin de origin master)
+git push (une fois depot github associï¿½ ï¿½ origin, plus besoin de origin master)
 
 git push --help (aide commande push)
 
@@ -146,7 +146,7 @@ ajoute dans le head:
 rails on mysql:
 rails new testproject -d mysql
 
-création nouvel user mysql:
+crï¿½ation nouvel user mysql:
 GRANT ALL PRIVILEGES ON *.* TO 'og12'@'localhost' IDENTIFIED BY 'pp' WITH GRANT OPTION;
 og12/pp
 
@@ -166,7 +166,7 @@ rails generate controller home index page1 page2 ..
 ajoute dans routes.rb : 
 get "home/index"
 get "home/page1" ...
-Pour réorienter site -> virer index de public et ajouter à routes.rb: 
+Pour rï¿½orienter site -> virer index de public et ajouter ï¿½ routes.rb: 
 root :to=> 'home#index'
 -------------------------------------------------------------------------------
 image to sqlite3 (for version>3):
@@ -180,7 +180,7 @@ http://stackoverflow.com/questions/7311184/rails-how-to-add-a-blob-column-using-
 email > ilyes.mathieu@gmail.com
 Setting user.email to ilyes.mathieu@gmail.com
 'clip' n'est pas reconnu en tant que commande interne
-ou externe, un programme exécutable ou un fichier de commandes.
+ou externe, un programme exï¿½cutable ou un fichier de commandes.
 
 ---
 git:
@@ -218,7 +218,7 @@ https://github.com/joshuaclayton/blueprint-css/wiki/Quick-start-tutorial
 blocs:
 (1..5).each { |i| puts 2 * i }
 
-équivallence
+ï¿½quivallence
 (1..5).each do |i|
  puts 2*i
 end
@@ -228,8 +228,8 @@ end
 ('a'..'z').to_a.shuffle[0..7].join
 
 user = { "first_name" => "Michael", "last_name" => "Hartl" }
-Ici j'ai utilisé la convention habituelle de Ruby qui consiste à placer une extra espace 
-aux deux extrémités de la table de hachage.
+Ici j'ai utilisï¿½ la convention habituelle de Ruby qui consiste ï¿½ placer une extra espace 
+aux deux extrï¿½mitï¿½s de la table de hachage.
 
 Vous pouvez penser les symboles comme des chaines sans le bagage correspondant
 :nom
@@ -237,20 +237,20 @@ user = { "first_name" => "Michael", "last_name" => "Hartl" }
 personne = { :nom => "Michael Hartl", :email => "michael@example.com" }
 params[:user] = { :nom => "Michael Hartl", :email => "mhartl@example.com" }
 
-flash = { :success => "Ça marche !", :error => "Raté… :-(" }
+flash = { :success => "ï¿½a marche !", :error => "Ratï¿½ :-(" }
 flash.each do |key, value|
-puts "La clé #{key.inspect} a la valeur #{value.inspect}"
+puts "La clï¿½ #{key.inspect} a la valeur #{value.inspect}"
 end
 
-table de hashage peut être implicite:
+table de hashage peut ï¿½tre implicite:
 user = User.new(:nom => "Michael Hartl", :email => "mhartl@example.com")
 
 
 
 rails c
-création example_user.rb à la racine
+crï¿½ation example_user.rb ï¿½ la racine
 si require './example_user' fonctionne pas
--> mettre chemin absolu à partir:
+-> mettre chemin absolu ï¿½ partir:
 >Rails.root
 (ou faire une extrapo: a="#{Rails.root}"+"/example_user.rb")
 
@@ -260,7 +260,7 @@ http://objectsonrails.com/#ID-6c9ee215-55f5-477d-be6c-0e3de4f3b663
 pb render partials:
 !! .html.erb extensions required for partials (and not .html.erb.txt!!)
 
-UTF8 server encoding pb -> virer les à et autre.
+UTF8 server encoding pb -> virer les ï¿½ et autre.
 Doit  y avoir autre solution...
 ---------------------------------
 rails generate integration_test layout_links
@@ -274,7 +274,7 @@ http://fr.gravatar.com/
 rails formulaire:
 form_for
 
-paramètre à sécuriser:
+paramï¿½tre ï¿½ sï¿½curiser:
 config/application.rb
 # Configure sensitive parameters which will be filtered from the log file.
 config.filter_parameters += [:password, :paramtre_du_formulaire_a_filtrer(ex: :email,:nom etc)]
@@ -300,20 +300,20 @@ if @user.save
  -> notice a fonction de flash (flash notice)
  
  NB:
- flash.now est spécialement conçu pour afficher les messages flash sur les pages rendues
- (sinon persistance car différence page rendue/page de redirection)
-  Si vous vous demandez un jour pourquoi un message flash est affiché à un endroit que vous n'attendiez pas, 
-  il y a de fortes chances qu'il faille mettre ce message dans flash.now plutôt que dans flash
+ flash.now est spï¿½cialement conï¿½u pour afficher les messages flash sur les pages rendues
+ (sinon persistance car diffï¿½rence page rendue/page de redirection)
+  Si vous vous demandez un jour pourquoi un message flash est affichï¿½ ï¿½ un endroit que vous n'attendiez pas, 
+  il y a de fortes chances qu'il faille mettre ce message dans flash.now plutï¿½t que dans flash
 ---------------------------------
 Session helper:
-Par défaut, tous les helpers sont accessibles dans les vues (views) mais pas dans les contrôleurs. 
-Nous avons besoin des méthodes de l'helper Sessions aux deux endroits, donc nous devons l'inclure explicitement.
+Par dï¿½faut, tous les helpers sont accessibles dans les vues (views) mais pas dans les contrï¿½leurs. 
+Nous avons besoin des mï¿½thodes de l'helper Sessions aux deux endroits, donc nous devons l'inclure explicitement.
 
 Session et cookies:
-Parce que HTTP est un protacole sans état, les applications web requiérant l'identification des utilisateurs implémentent une façon de pister chaque parcours 
-d'utilisateur de page en page. Une technique pour maintenir l'état de l'identification de l'utilisateur consiste à utiliser la traditionnelle session Rails 
-(via la fonction spéciale sessions) pour enregistrer un rappel symbolique (remember_token) égal à l'identifiant (id) de l'utilisateur.
-Cette objet session rend l'id de l'utilisateur accessible de page en page en l'enregistrant dans un cookie qui expire à la fermeture du navigateur.
+Parce que HTTP est un protacole sans ï¿½tat, les applications web requiï¿½rant l'identification des utilisateurs implï¿½mentent une faï¿½on de pister chaque parcours 
+d'utilisateur de page en page. Une technique pour maintenir l'ï¿½tat de l'identification de l'utilisateur consiste ï¿½ utiliser la traditionnelle session Rails 
+(via la fonction spï¿½ciale sessions) pour enregistrer un rappel symbolique (remember_token) ï¿½gal ï¿½ l'identifiant (id) de l'utilisateur.
+Cette objet session rend l'id de l'utilisateur accessible de page en page en l'enregistrant dans un cookie qui expire ï¿½ la fermeture du navigateur.
 Sur chaque page, l'application a juste besoin d'appeler: User.find_by_id(session[:remember_token])
 
 cookies[:remember_token] = { :value   => user.id,
@@ -324,14 +324,14 @@ User.find_by_id(cookies[:remember_token])
 
 
 cookies.permanent.signed[:remember_token] = [user.id, user.salt]
-Sous le capot, utiliser permanent fait que Rails règle l'expiration à 20.years.from_now, et signed rend le cookie sécurisé, 
-de telle sorte que l'id de l'utilisateur n'est jamais exposé dans le navigateur
+Sous le capot, utiliser permanent fait que Rails rï¿½gle l'expiration ï¿½ 20.years.from_now, et signed rend le cookie sï¿½curisï¿½, 
+de telle sorte que l'id de l'utilisateur n'est jamais exposï¿½ dans le navigateur
 
-utilisation de tableau en paramètre de fonction:
+utilisation de tableau en paramï¿½tre de fonction:
 foo(1,2)
 foo(*[1, 2]) ->ajouter le "*"
 ------------------------------
-dépendance de la suppression:
+dï¿½pendance de la suppression:
 class User < ActiveRecord::Base
   .
   .
@@ -340,7 +340,7 @@ class User < ActiveRecord::Base
   .
 end
 ------------------------------
-outil CSS pour dégradés!
+outil CSS pour dï¿½gradï¿½s!
 http://www.display-inline.fr/
 ------------------------------
 twitter-bootstrap-rails gem
@@ -380,3 +380,4 @@ CSS image hover opacity:
 http://www.paulund.co.uk/css3-image-filters
 
 -------------------------------
+test
